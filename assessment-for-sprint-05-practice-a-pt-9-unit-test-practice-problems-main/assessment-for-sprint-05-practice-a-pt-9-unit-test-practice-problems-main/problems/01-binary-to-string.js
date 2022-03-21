@@ -1,30 +1,30 @@
-// function binaryToString(binaryBlob) {
-//   let binaryBlobArray = binaryBlob.split("")
-//   let binaryArray = []
-//   let i = 0;
-//   let subString = '';
+function binaryToString(binaryBlob) {
+  let binaryBlobArray = binaryBlob.split("")
+  let binaryArray = []
+  let i = 0;
+  let subString = '';
 
-//   while (binaryBlobArray.length) {
-// // console.log(i)
+  while (binaryBlobArray.length) {
+// console.log(i)
 
-//     if(i === 8) {
-//       binaryArray.push(subString)
-//       i = 0;
-//       subString = '';
-//     }
-//     let currentChar = binaryBlobArray.shift();
-//     subString += currentChar;
+    if(i === 8) {
+      binaryArray.push(subString)
+      i = 0;
+      subString = '';
+    }
+    let currentChar = binaryBlobArray.shift();
+    subString += currentChar;
 
-//     i++
-//   }
-//   binaryArray.push(subString);
+    i++
+  }
+  binaryArray.push(subString);
 
-//   let myNumArr = binaryArray.map(el => parseInt(el, 2))
-//   let myLetterArr = myNumArr.map(el => String.fromCharCode(el))
-//   return myLetterArr.join("")
-// } //baylen
+  let myNumArr = binaryArray.map(el => parseInt(el, 2))
+  let myLetterArr = myNumArr.map(el => String.fromCharCode(el))
+  return myLetterArr.join("")
+} //baylen
 
-// console.log(binaryToString('010000010100001001000011'));  // 'ABC'
+console.log(binaryToString('010000010100001001000011'));  // 'ABC'
 
 // function binaryToDecimal(binary) {
 // //   if (!binary) return 0;
@@ -67,6 +67,9 @@
 //   }
 //   return res;
 // }
+
+//if asked to turn String to binary, remember to use charCodeAt and toString methods
+//charCodeAt returns the unique code on the ASCII chart. 
 
 console.log(binaryToString('010000010100001001000011'));
 module.exports = binaryToString;
